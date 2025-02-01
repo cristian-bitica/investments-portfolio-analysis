@@ -1,0 +1,92 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3 with Unity Catalog",
+	"dockerComposeFile": "docker-compose.yml",
+    "service": "python",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uv sync --no-cache",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"settings": {
+				// General settings
+				"security.workspace.trust.untrustedFiles": "newWindow",
+				"window.commandCenter": false,
+				"files.exclude": {
+					".git": true,
+					"**/.git": false
+				},
+				"editor.fontSize": 13,
+				"extensions.autoUpdate": "onlyEnabledExtensions",
+				"telemetry.enableTelemetry": false,
+				"workbench.colorTheme": "Darcula",
+				"workbench.iconTheme": "material-icon-theme",
+				"workbench.tree.indent": 22,
+				"workbench.editor.enablePreview": false,
+				"workbench.editor.tabSizing": "shrink",
+				"files.autoSave": "afterDelay",
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": "explicit"
+				},
+				"workbench.settings.editor": "json",
+				"workbench.settings.openDefaultSettings": true,
+    			"workbench.settings.useSplitJSON": true,
+				"debug.console.fontSize": 13,
+				"files.trimTrailingWhitespace": true,
+
+				// Git settings
+				"git.autofetch": true,
+				"git.confirmSync": false,
+				"git.enableSmartCommit": true,
+				"git.showActionButton": {
+					"commit": false,
+					"publish": false,
+					"sync": false
+				},
+				"explorer.excludeGitIgnore": false,
+				"explorer.autoReveal": true,
+
+				// Python settings
+				"python.terminal.activateEnvironment": true,
+				"python.analysis.autoFormatStrings": true,
+				"python.analysis.autoImportCompletions": true,
+				"python.analysis.typeCheckingMode": "basic",
+				"[python]": {
+					"editor.formatOnType": false,
+					"editor.formatOnSave": true,
+					"editor.formatOnSaveMode": "file",
+					"editor.defaultFormatter": "charliermarsh.ruff"
+				},
+
+				// Terminal settings
+				"terminal.integrated.fontSize": 13,
+				"terminal.integrated.shell.linux": "/bin/bash"
+			},
+			"extensions": [
+				"ms-python.python",
+				"rokoroku.vscode-theme-darcula",
+				"tamasfe.even-better-toml",
+				"github.vscode-github-actions",
+				// "GitHub.copilot",
+				"PKief.material-icon-theme",
+				"charliermarsh.ruff",
+				"redhat.vscode-yaml",
+				"aaron-bond.better-comments"
+			]
+		}
+	},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

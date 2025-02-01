@@ -1,0 +1,16 @@
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+  # unitycatalog:
+  #   build:
+  #     context: .
+  #     dockerfile: ../unitycatalog/Dockerfile
+  #   ports:
+  #     - "3000:3000"
