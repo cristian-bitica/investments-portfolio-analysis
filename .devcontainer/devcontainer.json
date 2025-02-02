@@ -14,7 +14,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uv sync --no-cache",
+	"postCreateCommand": "( [ -f pyproject.toml ] || uv init . ) && uv sync --no-cache",
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -74,15 +74,15 @@
 				"terminal.integrated.shell.linux": "/bin/bash"
 			},
 			"extensions": [
-				"ms-python.python",
-				"rokoroku.vscode-theme-darcula",
-				"tamasfe.even-better-toml",
-				"github.vscode-github-actions",
+				// "ms-python.python",
+				// "rokoroku.vscode-theme-darcula",
+				// "tamasfe.even-better-toml",
+				// "github.vscode-github-actions",
 				// "GitHub.copilot",
-				"PKief.material-icon-theme",
-				"charliermarsh.ruff",
-				"redhat.vscode-yaml",
-				"aaron-bond.better-comments"
+				// "PKief.material-icon-theme",
+				// "charliermarsh.ruff",
+				// "redhat.vscode-yaml",
+				// "aaron-bond.better-comments"
 			]
 		}
 	},

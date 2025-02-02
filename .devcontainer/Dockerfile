@@ -9,5 +9,5 @@ RUN pip install --no-cache-dir uv
 
 WORKDIR /workspace
 
-# RUN [ -e pyproject.toml ] || uv init
-RUN uv sync --no-cache
+# RUN uv init .
+# RUN uv sync --no-cache
