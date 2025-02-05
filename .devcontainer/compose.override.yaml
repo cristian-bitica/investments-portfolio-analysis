@@ -1,0 +1,6 @@
+
+services:
+  server:
+    container_name: uc-server
+  ui:
+    container_name: uc-ui

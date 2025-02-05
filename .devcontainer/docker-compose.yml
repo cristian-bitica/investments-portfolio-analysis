@@ -1,6 +1,7 @@
 
 include:
-  - ../unitycatalog/compose.yaml
+  - path:
+    - ../unitycatalog/compose.yaml
 
 services:
   python:
