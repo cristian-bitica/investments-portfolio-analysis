@@ -3,19 +3,15 @@
 {
 	"name": "Python 3 with Unity Catalog",
 	"dockerComposeFile": "docker-compose.yml",
-    "service": "python",
-    "workspaceFolder": "/workspace",
-    "shutdownAction": "stopCompose",
-
+	"service": "python",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "( [ -f pyproject.toml ] || uv init . ) && uv sync --no-cache",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
@@ -41,10 +37,9 @@
 				},
 				"workbench.settings.editor": "json",
 				"workbench.settings.openDefaultSettings": true,
-    			"workbench.settings.useSplitJSON": true,
+				"workbench.settings.useSplitJSON": true,
 				"debug.console.fontSize": 13,
 				"files.trimTrailingWhitespace": true,
-
 				// Git settings
 				"git.autofetch": true,
 				"git.confirmSync": false,
@@ -56,7 +51,6 @@
 				},
 				"explorer.excludeGitIgnore": false,
 				"explorer.autoReveal": true,
-
 				// Python settings
 				"python.terminal.activateEnvironment": true,
 				"python.analysis.autoFormatStrings": true,
@@ -68,7 +62,6 @@
 					"editor.formatOnSaveMode": "file",
 					"editor.defaultFormatter": "charliermarsh.ruff"
 				},
-
 				// Terminal settings
 				"terminal.integrated.fontSize": 13,
 				"terminal.integrated.shell.linux": "/bin/bash"
@@ -86,7 +79,6 @@
 			]
 		}
 	},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }

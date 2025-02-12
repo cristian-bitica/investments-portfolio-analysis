@@ -7,9 +7,11 @@ RUN apt update && export DEBIAN_FRONTEND=noninteractive \
 
 RUN pip install --no-cache-dir uv
 
-RUN export JAVA_HOME=$(readlink -f $(which java)) >> ~/.bashrc && export PATH=$JAVA_HOME/bin:$PATH >> ~/.bashrc
+# RUN export JAVA_HOME=$(readlink -f $(which java)) >> ~/.bashrc && export PATH=$JAVA_HOME/bin:$PATH >> ~/.bashrc
 
 WORKDIR /workspace
+
+# ENV SPARK_HOME=$(readlink -f $(which java))
 
 # RUN uv init .
 # RUN uv sync --no-cache

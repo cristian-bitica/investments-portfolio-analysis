@@ -10,7 +10,7 @@ def get_spark_session():
     ]
     # token is not required for local testing
     builder = (
-        SparkSession.builder.appName("local-uc-test")
+        SparkSession.builder.appName("local-spark-uc")
         .master("local[*]")
         .config("spark.jars.packages", packages)
         # .config("spark.jars.packages", "io.unitycatalog:unitycatalog-spark_2.12:0.2.0")
