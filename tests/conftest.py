@@ -38,7 +38,7 @@ def testing_context(tmp_path_factory) -> TestingContext:
 def spark_testing_context(testing_context, tmp_path_factory):
     packages = [
         "io.delta:delta-spark_2.12:3.3.0",
-        "io.unitycatalog:unitycatalog-spark_2.12:0.2.1",
+        # "io.unitycatalog:unitycatalog-spark_2.12:0.2.1",
         "io.delta:delta-storage:3.3.0",
     ]
     spark = (
@@ -64,13 +64,13 @@ def spark_testing_context(testing_context, tmp_path_factory):
         .config("spark.driver.memory", "2g")
         .config("spark.sql.warehouse.dir", str(tmp_path_factory.mktemp("warehouse").absolute()))
         # .config("spark.jars.packages", packages)
-        .config("spark.sql.catalog.unity", "io.unitycatalog.spark.UCSingleCatalog")
-        .config("spark.sql.catalog.unity.uri", "http://server:8080")
-        .config("spark.sql.catalog.unity.token", "")
-        .config("spark.sql.catalog.portfolio", "io.unitycatalog.spark.UCSingleCatalog")
-        .config("spark.sql.catalog.portfolio.uri", "http://server:8080")
-        .config("spark.sql.catalog.portfolio.token", "")
-        .config("spark.sql.defaultCatalog", "unity")
+        # .config("spark.sql.catalog.unity", "io.unitycatalog.spark.UCSingleCatalog")
+        # .config("spark.sql.catalog.unity.uri", "http://server:8080")
+        # .config("spark.sql.catalog.unity.token", "")
+        # .config("spark.sql.catalog.portfolio", "io.unitycatalog.spark.UCSingleCatalog")
+        # .config("spark.sql.catalog.portfolio.uri", "http://server:8080")
+        # .config("spark.sql.catalog.portfolio.token", "")
+        # .config("spark.sql.defaultCatalog", "unity")
         .config("spark.driver.host", "127.0.0.1")
 
     )
